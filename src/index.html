@@ -1,0 +1,23 @@
+<div class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <button class="button is-large is-fullwidth" id="nofacebutton">
+                顔をなくす | 🔔
+            </button>
+            <div class="has-text-centered">
+                <p class="has-text-weight-semibold">顔を<span class="is-underlined"><span id="displaycount"></span>回</span>なくしました</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let nofacecount = 0;
+    const countSpan = document.querySelector('#displaycount');
+    countSpan.textcontent = nofacecount.toString();
+    const nofacebuttonpush = document.getElementById("nofacebutton");
+    nofacebuttonpush.addEventListener("click", () => {
+        nofacecount++;
+        countSpan.textcontent = nofacecount.toString();
+    })
+</script>

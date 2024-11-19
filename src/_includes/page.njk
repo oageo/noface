@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8" />
+		<meta name="description" content="ボタンを押すと顔をなくせるかもしれない" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="顔をなくすボタン" />
+		<meta name="viewport" content="width=device-width" />
+        <meta name="generator" content="{{ eleventy.generator }}" />
+		<title>顔をなくすボタン</title>
+        <link rel="stylesheet" href="{{ "/assets/bulma.min.css" | htmlBaseUrl }}">
+    </head>
+    <body>
+        <main>
+            {% block main %}
+                {{ content | safe }}
+            {% endblock %}
+        </main>
+        {% include "./components/footer.njk" %}
+    </body>
+</html>
