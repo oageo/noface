@@ -11,10 +11,12 @@
         <link rel="stylesheet" href="/assets/bulma.min.css">
     </head>
     <body>
-        <main>
-            {% block main %}
+        <main class="hero is-fullheight">
+            {% include "./components/herohead.njk" %}
+            {% block div %}
                 {{ content | safe }}
             {% endblock %}
+            {% include "./components/herofoot.njk" %}
         </main>
         {% include "./components/footer.njk" %}
     </body>
