@@ -1,0 +1,27 @@
+<div class="hero-foot container my-2">
+    <nav class="tabs">
+        <ul class="subtitle" style="flex-grow:1;justify-content: center;">
+            <li>
+                <a id="sharebutton">
+                    共有
+                </a>
+            </li>
+            <li>
+                <a href="https://c.osumiakari.jp/@oageo">作者</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+const shareData = {
+    title: "顔をなくすボタン",
+    text: "顔を" + nofacecount + "回なくしました。",
+    url: "https://noface.osumiakari.jp",
+};
+
+const shareButton = document.getElementById("sharebutton");
+shareButton.addEventListener("click", () => {
+    navigator.share(shareData);
+});
+</script>
