@@ -14,7 +14,7 @@
 </div>
 
 <script>
-const shareData = {
+let shareData = {
     title: "顔をなくすボタン",
     text: "顔を" + nofacecount + "回なくしました。",
     url: "https://noface.osumiakari.jp",
@@ -22,6 +22,7 @@ const shareData = {
 
 const shareButton = document.getElementById("sharebutton");
 shareButton.addEventListener("click", () => {
+    shareData.text = "顔を" + nofacecount + "回なくしました。"
     navigator.share(shareData);
 });
 </script>
