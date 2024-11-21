@@ -8,6 +8,9 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy(
         "src/scripts"
     );
+    eleventyConfig.addPassthroughCopy({ 
+        "src/robots.txt" : "/robots.txt" 
+    });
     return {
         dir: {
             input: "src",
