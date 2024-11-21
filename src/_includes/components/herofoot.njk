@@ -1,28 +1,35 @@
 <div class="hero-foot container my-2">
     <nav class="tabs">
-        <ul class="subtitle" style="flex-grow:1;justify-content: center;">
+        <ul class="subtitle is-underlined" style="flex-grow:1;justify-content: center;">
             <li>
                 <a id="sharebutton">
                     共有
                 </a>
             </li>
-            <li>
-                <a href="https://c.osumiakari.jp/@oageo">作者</a>
+            <li id="resetbutton">
+                リセット
             </li>
         </ul>
     </nav>
 </div>
 
 <script>
+let resultText = "顔を" + nofacecount + "回なくしました。";
+
 let shareData = {
     title: "顔をなくすボタン",
-    text: "顔を" + nofacecount + "回なくしました。",
+    text: resultText,
     url: "https://noface.osumiakari.jp",
 };
 
 const shareButton = document.getElementById("sharebutton");
 shareButton.addEventListener("click", () => {
-    shareData.text = "顔を" + nofacecount + "回なくしました。"
+    shareData.text = resultText;
     navigator.share(shareData);
+});
+
+const resetButton = document.getElementById("resetbutton");
+resetButton.addEventListener("click", () => {
+    nofacecount = 0;
 });
 </script>
