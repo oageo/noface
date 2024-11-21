@@ -1,0 +1,33 @@
+---
+layout: info
+title: その他の顔をなくすボタン
+description: 私以外の方が作成した顔をなくすボタン一覧
+---
+
+<div class="container">
+    <div class="my-2">
+        <h1 class="title">
+            {{ title }}
+        </h1>
+        <p class="subtitle">
+            {{ description }}
+        </p>
+    </div>
+    <hr>
+    <div class="columns">
+        {%- for other in othernofacebuttons.others %}
+            <a class="column is-4 m-2 card" href={{ other.url }} >
+                <div class="card-content">
+                    <h2 class="title">
+                        {{ other.name }}
+                    </h2>
+                    <hr>
+                    <p class="subtitle">
+                        作者: {{ other.author }}
+                    </p>
+                </div>
+            </a>
+        {%- endfor %}
+    </div>
+</div>
+
