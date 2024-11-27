@@ -2,8 +2,8 @@
     <nav class="tabs">
         <ul class="subtitle is-underlined" style="flex-grow:1;justify-content: center;">
             <li>
-                <a id="sharebutton">
-                    共有
+                <a id="websharebutton">
+                    共有（ウェブ共有 API）
                 </a>
             </li>
             <li id="resetbutton">
@@ -14,22 +14,21 @@
 </div>
 
 <script>
-let resultText = "顔を" + nofacecount + "回なくしました。";
-
 let shareData = {
     title: "顔をなくすボタン",
-    text: resultText,
+    text: "顔を" + nofacecount + "回なくしました。",
     url: "https://noface.osumiakari.jp",
 };
 
-const shareButton = document.getElementById("sharebutton");
+const shareButton = document.getElementById("websharebutton");
 shareButton.addEventListener("click", () => {
-    shareData.text = resultText;
+    shareData.text = "顔を" + nofacecount + "回なくしました。";
     navigator.share(shareData);
 });
 
 const resetButton = document.getElementById("resetbutton");
 resetButton.addEventListener("click", () => {
     nofacecount = 0;
+    document.getElementById("displaycount").textContent = nofacecount;
 });
 </script>

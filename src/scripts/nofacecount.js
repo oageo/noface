@@ -7,7 +7,7 @@ const onclickevent = () => {
 
 let nofacecount = 0;
 const nofacebuttonpush = document.getElementById("nofacebutton");
-const ding = new Audio("/assets/otologic-ding04-short.opus");
+const ding = new Audio("/assets/otologic-ding04-short.mp3");
 ding.currentTime = 0;
 nofacebuttonpush.addEventListener("click", () => {
     onclickevent();
