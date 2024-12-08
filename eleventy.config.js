@@ -9,8 +9,11 @@ module.exports = (eleventyConfig) => {
         "src/scripts"
     );
     eleventyConfig.addPassthroughCopy({ 
-        "src/robots.txt" : "/robots.txt" 
+        "src/robots.txt" : "/robots.txt"
     });
+    eleventyConfig.addPassthroughCopy({
+        "src/manifest.json" : "/manifest.json" 
+    })
     return {
         dir: {
             input: "src",

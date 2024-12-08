@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "顔をなくすボタン",
+    "icons": [
+        {
+            "src": "/assets/1f6ce.svg",
+            "type": "image/svg+xml" 
+        }
+    ],
+    "start_url": "https://noface.osumiakari.jp"
+}
