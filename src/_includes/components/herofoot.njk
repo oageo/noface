@@ -6,6 +6,11 @@
                     共有（ウェブ共有 API）
                 </a>
             </li>
+            <li id ="copy">
+                <a id="copybutton">
+                    結果をコピー
+                </a>
+            </li>
             <li id="resetbutton">
                 リセット
             </li>
@@ -25,6 +30,12 @@ shareButton.addEventListener("click", () => {
     shareData.text = "顔を" + nofacecount + "回なくしました。";
     navigator.share(shareData);
 });
+
+const copyButton = document.getElementById("copybutton");
+copyButton.addEventListener("click", () =>{
+    copyButton.text = "顔を" + nofacecount + "回なくしました。" + "\n" + shareData.url;
+    navigator.clipboard.writeText(copyButton.text);
+})
 
 const resetButton = document.getElementById("resetbutton");
 resetButton.addEventListener("click", () => {
